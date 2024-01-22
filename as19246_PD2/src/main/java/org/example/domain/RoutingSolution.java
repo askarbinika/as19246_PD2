@@ -70,40 +70,41 @@ public class RoutingSolution {
         a1.setVisitId("Klients1");
         a1.setTimeStart(8.00);
         a1.setTimeEnd(12.00);
-    Location a1Loc = new Location(0.0, 4.0);
+    Location a1Loc = new Location(100.0, 45.0);
         a1.setLocation(a1Loc);
 
     Visit a2 = new Visit();
         a2.setVisitId("Klients2");
         a2.setTimeStart(10.00);
         a2.setTimeEnd(13.00);
-    Location a2Loc = new Location(4.0, 4.0);
+    Location a2Loc = new Location(40.0, 42.0);
         a2.setLocation(a2Loc);
 
     Visit a3 = new Visit();
         a3.setVisitId("Klients3");
         a3.setTimeStart(12.00);
         a3.setTimeEnd(14.00);
-    Location a3Loc = new Location(3.0, 1.0);
+    Location a3Loc = new Location(30.0, 19.0);
         a3.setLocation(a3Loc);
 
     Visit a4 = new Visit();
-        a4.setVisitId("Noliktava1");
+        a4.setVisitId("Klients4");
         a4.setTimeStart(14.00);
         a4.setTimeEnd(15.00);
-    Location stockLoc = new Location(4.0, 0.0);
-        a4.setLocation(stockLoc);
+    Location a4Loc = new Location(41.0, 0.0);
+        a4.setLocation(a4Loc);
 
     Visit a5 = new Visit();
         a5.setTimeStart(15.00);
         a5.setTimeEnd(17.00);
-        a5.setVisitId("Noliktava2");
-        a5.setLocation(stockLoc);
+        a5.setVisitId("Klients5");
+        Location a5Loc = new Location(11.0, 80.0);
+        a5.setLocation(a5Loc);
 
 
 
         problem.getVehicleList().addAll(List.of(v1, v2));
-        problem.getLocationList().addAll(List.of(depotLoc, a1Loc, a2Loc, a3Loc, stockLoc));
+        problem.getLocationList().addAll(List.of(depotLoc, a1Loc, a2Loc, a3Loc, a4Loc, a5Loc));
         problem.getVisitList().addAll(List.of(a1, a2, a3, a4, a5));
 
         return problem; }

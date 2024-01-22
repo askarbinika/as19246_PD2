@@ -11,7 +11,7 @@ public class Location extends Visit {
     private Double lon;
 
     public Double timeTo(Location location){
-        return Math.sqrt(Math.pow(this.lat - location.lat, 2) + Math.pow(this.lon - location.lon,2));
+        return (Math.sqrt(Math.pow(this.lat - location.lat, 2) + Math.pow(this.lon - location.lon,2)))/50;
     }
     public Double distanceTo(Location location){
         return Math.sqrt(Math.pow(this.lat - location.lat, 2) + Math.pow(this.lon - location.lon,2));
